@@ -111,7 +111,7 @@ const MagForm = defineComponent({
     const handleReset = (event: any) => {
       formRef.value.resetFields();
       Objects.setObjectValues(props.model, formModelCached, true);
-      emit("reset", event, {});
+      emit("reset", event, props.model);
     }
 
     /**

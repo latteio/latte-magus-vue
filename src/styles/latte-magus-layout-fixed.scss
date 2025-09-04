@@ -3,7 +3,7 @@
  */
 .mag-view-card-layout {
   --mag-view-card-layout-border-color: var(--mag-component-border-color);
-  --mag-view-card-layout-border-radius: 2px;
+  --mag-view-card-layout-border-radius: var(--mag-view-base-border-radius);
   --mag-view-card-layout-padding: var(--mag-view-base-padding);
   --mag-view-card-layout-bg-color: var(--el-fill-color-blank);
   display: flex;

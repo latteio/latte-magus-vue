@@ -19,6 +19,7 @@ input[aria-hidden="true"] {
   height: var(--mag-view-header-height);
   line-height: var(--mag-view-header-height);
   background-color: var(--mag-view-header-background-color) !important;
+  border-radius: var(--mag-view-card-layout-border-radius);
 }
 
 .el-header > .mag-form__header-text {

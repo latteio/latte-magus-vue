@@ -67,7 +67,7 @@ import {cities, employees, genders, orgs} from "@/views/demos/mainData";
 const formRef = ref();
 const formData = reactive({
   id: '',
-  name: '',
+  name: '张三',
   gender: '',
   gender1: '',
   age: '',
