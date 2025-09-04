@@ -1,5 +1,5 @@
 # latte-magus-vue-v2025.1.x
-
+【基于Vu3+ElementPlus+ts+tsx组件封装】
 目标: 精致, 精炼, 贴近原生; 封装不变, 扩展易变的, 尽量不改变用户习惯.
 使用纯tsx模式封装组件.
 尽量不用或少用第三方插件, 而只使用vue3+ElementPlus的特性完成组件编制.
