@@ -40,7 +40,10 @@ const MagPage = defineComponent({
     return () => {
       return <ElPageHeader {...props}
                            {...attrs}
-                           class={props.shadow ? "mag-page mag-view-card-layout is-shadow-layout" : "mag-page"}
+                           class={{
+                             "mag-page": true,
+                             "mag-view-card-layout is-shadow-layout": props.shadow
+                           }}
                            icon={ArrowLeft}
                            onBack={backwardHandler}
                            v-slots={{

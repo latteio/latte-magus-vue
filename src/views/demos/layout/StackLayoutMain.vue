@@ -54,11 +54,6 @@
 
     <!-- 表格 -->
     <mag-table header="表格样例" ref="orgTable2Ref" :row-checkbox="true" :use-page="false" height="200px" :data="orgs">
-      <mag-table-bar>
-        <mag-button type="primary" :icon="Plus">新增</mag-button>
-        <mag-button type="primary" :icon="Upload">上传</mag-button>
-        <mag-button type="primary" :icon="Download">下载</mag-button>
-      </mag-table-bar>
       <mag-table-column prop="orgCode" label="机构编码"/>
       <mag-table-column prop="orgName" label="机构名称"/>
       <mag-table-column-tag prop="orgType" label=机构类型 :use-tag="true"

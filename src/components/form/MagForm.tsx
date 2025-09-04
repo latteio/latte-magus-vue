@@ -324,7 +324,12 @@ const MagForm = defineComponent({
      * 定义返回模板
      */
     return () => {
-      return <ElContainer v-show={componentVisible.value} class={props.shadow ? "mag-view-card-layout is-shadow-layout" : ""}>
+      return <ElContainer v-show={componentVisible.value}
+                          class={{
+                            "mag-view-card-layout is-shadow-layout": props.shadow,
+                            "is-expanded": componentExpanded.value,
+                            "is-collapsed": !componentExpanded.value
+                          }}>
         {formHeader()}
         <ElCollapseTransition>
           <ElMain class="mag-form__main" style={`height: ${minHeight}px;`} v-show={componentExpanded.value}>

@@ -154,7 +154,12 @@ const MagTree = defineComponent({
         }
       }
 
-      return <ElContainer v-show={componentVisible.value} class={props.shadow ? "mag-view-card-layout is-shadow-layout" : ""}
+      return <ElContainer v-show={componentVisible.value}
+                          class={{
+                            "mag-view-card-layout is-shadow-layout": props.shadow,
+                            "is-expanded": componentExpanded.value,
+                            "is-collapsed": !componentExpanded.value
+                          }}
                           v-loading={loadingStatus.value}>
         {treeHeader()}
         <ElCollapseTransition>

@@ -8,7 +8,6 @@
   --mag-view-card-layout-bg-color: var(--el-fill-color-blank);
   display: flex;
   width: 100%;
-  height: 100%;
   background-color: var(--mag-view-card-layout-bg-color);
   border: 1px solid var(--mag-view-card-layout-border-color);
   border-radius: var(--mag-view-card-layout-border-radius);
@@ -24,7 +23,7 @@
 
 .mag-view-card-layout.is-collapsed {
   width: 100%;
-  height: auto !important;
+  height: var(--mag-view-header-height) !important;
 }
 
 .mag-view-card-layout.is-vertical {

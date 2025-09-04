@@ -415,7 +415,8 @@ const MagTable = defineComponent({
       return tableBar && (
           <div class={tableBar.props?.align && alignments.includes(tableBar.props?.align)
               ? `mag-table__table-bars is-${tableBar.props?.align}-alignment`
-              : "mag-table__table-bars is-left-alignment"}>
+              : "mag-table__table-bars is-left-alignment"}
+          >
             <MagTableBar {...tableBar.props} {...tableBar.attrs}>
               {tableBar.children?.default?.()}
             </MagTableBar>
@@ -431,7 +432,8 @@ const MagTable = defineComponent({
       return props.usePage && (
           <div class={alignments.includes(props?.pageAlign)
               ? `mag-table__table-page-bars is-${props?.pageAlign}-alignment`
-              : "mag-table__table-page-bars is-left-alignment"}>
+              : "mag-table__table-page-bars is-left-alignment"}
+          >
             <MagTablePagination layout={props.pageLayout}
                                 size={props.size === "large" ? props.size : "default"}
                                 page-sizes={props.pageSizes}
@@ -500,7 +502,12 @@ const MagTable = defineComponent({
       /**
        * 定义返回模板
        */
-      return <ElContainer v-show={componentVisible.value} class={props.shadow ? "mag-view-card-layout is-shadow-layout" : ""}
+      return <ElContainer v-show={componentVisible.value}
+                          class={{
+                            "mag-view-card-layout is-shadow-layout": props.shadow,
+                            "is-expanded": componentExpanded.value,
+                            "is-collapsed": !componentExpanded.value
+                          }}
                           v-loading={loadingStatus.value}>
         {tableHeader()}
         <ElCollapseTransition>
@@ -509,9 +516,10 @@ const MagTable = defineComponent({
             <ElTable {...props}
                      {...attrs}
                      data={tableModel.rowData}
-                     class={attrs.border == true
-                         ? "mag-table__table"
-                         : (null != tableBar ? "mag-table__table" : "mag-table__table mag-table__table-bars-empty")}
+                     class={{
+                       "mag-table__table": true,
+                       "mag-table__table-bars-empty": null === tableBar
+                     }}
                      height={calculateTableHeight(null != tableBar, props.usePage)}
                      show-overflow-tooltip
                      stripe>

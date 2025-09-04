@@ -28,7 +28,7 @@ const MagTabGroup = defineComponent({
      */
     return () => (
         <ElTabs v-show={componentVisible.value} {...props} {...attrs} v-model={currentTab.value}
-                class={props.shadow ? "mag-view-card-layout is-shadow-layout" : ""}>
+                class={{"mag-view-card-layout is-shadow-layout": props.shadow}}>
           {slots?.default?.()}
         </ElTabs>
     )

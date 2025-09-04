@@ -57,7 +57,11 @@ const MagPane = defineComponent({
       return <ElContainer {...props}
                           {...attrs}
                           v-show={componentVisible.value}
-                          class={props.shadow ? "mag-view-card-layout is-shadow-layout" : ""}>
+                          class={{
+                            "mag-view-card-layout is-shadow-layout": props.shadow,
+                            "is-expanded": componentExpanded.value,
+                            "is-collapsed": !componentExpanded.value
+                          }}>
         {paneHeader()}
         <ElCollapseTransition>
           <ElMain class="mag-pane__main" v-show={componentExpanded.value}>

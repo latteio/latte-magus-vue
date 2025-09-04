@@ -29,7 +29,10 @@ const MagStackLayout = defineComponent({
                   {...attrs}
                   ref={stackRef}
                   v-show={componentVisible.value}
-                  class={`mag-view-stack-layout ${props.width === "100%" ? "is-contentful" : ""}`}
+                  class={{
+                    "mag-view-stack-layout": true,
+                    "is-contentful": props.width === "100%"
+                  }}
                   style={stackStyles.join(" ")}>
         {stackItemNodes.map((item) => {
           stackItemName = item?.props?.name || "mag-stack-item__" + uuid.v4();
