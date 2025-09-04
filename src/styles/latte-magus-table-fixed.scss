@@ -1,0 +1,111 @@
+/**
+ * 表格样式
+ */
+.mag-table__header {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mag-table__header:hover {
+  cursor: pointer;
+}
+
+.el-header.mag-table__header {
+  height: var(--mag-view-header-height);
+  line-height: var(--mag-view-header-height);
+  background-color: var(--mag-view-header-background-color) !important;
+}
+
+.el-header > .mag-table__header-text {
+  font-size: var(--mag-view-header-text-size) !important;
+  font-weight: var(--mag-view-header-text-weight) !important;
+  color: var(--mag-view-header-text-color) !important;
+  height: var(--mag-view-header-height);
+  line-height: var(--mag-view-header-height);
+}
+
+.el-header > .mag-table__header-icon {
+}
+
+.el-header.mag-table__header-empty {
+  height: 0 !important;
+}
+
+.el-main.mag-table__main {
+  flex: 1;
+  padding: 0 !important;
+}
+
+.el-main > .mag-table__table-bars {
+  display: flex;
+  height: var(--mag-view-bars-height);
+  align-items: center;
+  padding: 4px var(--mag-view-base-padding) !important;
+  box-sizing: border-box;
+}
+
+.mag-table__table-bars.is-left-alignment {
+  justify-content: flex-start;
+}
+
+.mag-table__table-bars.is-right-alignment {
+  justify-content: flex-end;
+}
+
+.mag-table__table-bars.is-center-alignment {
+  justify-content: center;
+}
+
+.el-main > .mag-table__table {
+  border: 0 !important;
+}
+
+.el-main > .mag-table__table.mag-table__table-bars-empty {
+  border: 0 !important;
+}
+
+.el-pagination__sizes {
+  display: flex !important;
+}
+
+.el-table--small {
+  font-size: var(--mag-font-size-small) !important;
+}
+
+.el-table thead tr th {
+  border-top: 1px solid var(--mag-component-border-color) !important;
+  background-color: var(--mag-view-thead-background-color) !important;
+  color: var(--el-text-color-regular) !important;
+  font-weight: 500 !important;
+  height: var(--mag-table-thead-height);
+}
+
+.el-table--border:before,
+.el-table--border:after,
+.el-table__inner-wrapper::before,
+.el-table__inner-wrapper::after,
+.el-table__border-left-patch {
+  display: none !important;
+}
+
+.mag-table__table-page-bars {
+  display: flex;
+  height: var(--mag-view-footer-height);
+  align-items: center;
+  box-sizing: border-box;
+  background-color: var(--mag-view-footer-background-color) !important;
+  padding: 0 20px;
+}
+
+.mag-table__table-page-bars.is-left-alignment {
+  justify-content: flex-start;
+}
+
+.mag-table__table-page-bars.is-right-alignment {
+  justify-content: flex-end;
+}
+
+.mag-table__table-page-bars.is-center-alignment {
+  justify-content: center;
+}

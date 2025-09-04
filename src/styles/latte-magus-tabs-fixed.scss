@@ -1,0 +1,17 @@
+/**
+ * Tabs 样式
+ */
+.mag-tab__header {
+  display: flex;
+  flex: 1;
+  align-items: center;
+
+  .el-icon {
+    align-items: center;
+  }
+
+  span {
+    align-items: center;
+    margin-left: 4px;
+  }
+}

@@ -1,0 +1,38 @@
+/**
+ * mag pane
+ */
+.mag-pane__header {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mag-pane__header:hover {
+  cursor: pointer;
+}
+
+.el-header.mag-pane__header {
+  height: var(--mag-view-header-height);
+  line-height: var(--mag-view-header-height);
+  background-color: var(--mag-view-header-background-color) !important;
+}
+
+.el-header > .mag-pane__header-text {
+  font-size: var(--mag-view-header-text-size) !important;
+  font-weight: var(--mag-view-header-text-weight) !important;
+  color: var(--mag-view-header-text-color) !important;
+  height: var(--mag-view-header-height) !important;
+  line-height: var(--mag-view-header-height) !important;
+}
+
+.el-header > .mag-pane__header-icon {
+}
+
+.el-header.mag-pane__header-empty {
+  height: 0 !important;
+}
+
+.el-main.mag-pane__main {
+  display: flex;
+  padding: 6px !important;
+}
