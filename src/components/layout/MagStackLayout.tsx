@@ -15,12 +15,12 @@ const MagStackLayout = defineComponent({
      */
     return () => {
       let stackStyles = [];
-      let parsedValue = Objects.parseValue(props.width);
+      let parsedValue = Objects.parsePropertyValue(props.width);
       if (!parsedValue.isPercentage && !parsedValue.isPixel) {
         throw new Error(`width属性值无效: ${props.width}`);
       }
-      if (parsedValue.isPercentage || parsedValue.isPercentage) {
-        stackStyles.push(`width: ${props.width};`);
+      if (parsedValue.isPercentage || parsedValue.isPixel) {
+        stackStyles.push(`width: ${parsedValue.value}${parsedValue.unit};`);
       }
 
       let stackItemName;

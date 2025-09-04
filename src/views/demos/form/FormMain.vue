@@ -14,7 +14,7 @@
     <mag-form region="center" header="操作表单" :model="formData" :columns="3" ref="formRef" :use-query="false">
       <mag-form-bar position="bottom">
         <mag-button type="primary">保存</mag-button>
-        <mag-button type="default">关闭</mag-button>
+        <mag-button type="primary">关闭</mag-button>
       </mag-form-bar>
       <mag-input :model="formData" prop="name" label="姓名：" placeholder="请输入姓名" clearable/>
       <mag-select :model="formData" prop="gender" label="性别：" :data="genders" placeholder="请选择性别" clearable ref="genderRef"/>

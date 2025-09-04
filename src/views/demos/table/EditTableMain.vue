@@ -3,7 +3,7 @@
              :data="employees" :params="queryParams" :use-page="true" page-align="center" :border="false"
              :selectable-handler="selectableHandler">
     <mag-table-bar align="center">
-      <mag-button type="default" :icon="Plus" @click="addRow">新增</mag-button>
+      <mag-button type="primary" :icon="Plus" @click="addRow">新增</mag-button>
       <mag-button type="primary" :icon="Edit" @click="editRow">编辑</mag-button>
       <mag-button type="primary" :icon="Close" @click="cancelEdit">取消编辑</mag-button>
       <mag-button type="primary" :icon="Delete" @click="delRow">删除</mag-button>

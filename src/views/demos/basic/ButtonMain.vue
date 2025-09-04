@@ -3,26 +3,26 @@
   <mag-divider content-position="left">按钮和按钮组相关</mag-divider>
   <mag-form :columns="1" ref="formRef">
     <mag-flex-component>
-      <mag-button type="default" @click="resetForm">重置</mag-button>
+      <mag-button type="primary" @click="resetForm">重置</mag-button>
       <mag-button type="primary" @click="submitForm">提交</mag-button>
     </mag-flex-component>
     <mag-button-group position="right">
-      <mag-button type="default">首页</mag-button>
-      <mag-button type="default">前页</mag-button>
-      <mag-button type="default">后页</mag-button>
-      <mag-button type="default">尾页</mag-button>
+      <mag-button type="primary">首页</mag-button>
+      <mag-button type="primary">前页</mag-button>
+      <mag-button type="primary">后页</mag-button>
+      <mag-button type="primary">尾页</mag-button>
     </mag-button-group>
     <mag-button-group>
-      <mag-button type="default" round>首页</mag-button>
-      <mag-button type="default" round>前页</mag-button>
-      <mag-button type="default" round>后页</mag-button>
-      <mag-button type="default" round>尾页</mag-button>
+      <mag-button type="primary" round>首页</mag-button>
+      <mag-button type="primary" round>前页</mag-button>
+      <mag-button type="primary" round>后页</mag-button>
+      <mag-button type="primary" round>尾页</mag-button>
     </mag-button-group>
     <mag-button-group>
-      <mag-link type="default">首页</mag-link>
-      <mag-link type="default">前页</mag-link>
-      <mag-link type="default">后页</mag-link>
-      <mag-link type="default">尾页</mag-link>
+      <mag-link type="primary">首页</mag-link>
+      <mag-link type="primary">前页</mag-link>
+      <mag-link type="primary">后页</mag-link>
+      <mag-link type="primary">尾页</mag-link>
     </mag-button-group>
   </mag-form>
 

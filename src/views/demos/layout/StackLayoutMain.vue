@@ -1,5 +1,5 @@
 <template>
-  <mag-stack-layout>
+  <mag-stack-layout width="80%">
     <!-- button-group -->
     <mag-button-group>
       <mag-button type="primary" @click="displayOrg">显示机构2</mag-button>
@@ -43,7 +43,7 @@
       <mag-table-column prop="orgCode" label="机构编码"/>
       <mag-table-column prop="orgName" label="机构名称"/>
       <mag-table-column-tag prop="orgType" label=机构类型 :use-tag="true"
-                            :tag-data="[{value:'10', label:'机构', type:'primary'}, {value:'20',label:'机构所属下级机构', type:'default'}, {value:'30',label:'机构所属部门', type:'success'}]"/>
+                            :tag-data="[{value:'10', label:'机构', type:'primary'}, {value:'20',label:'机构所属下级机构'}, {value:'30',label:'机构所属部门', type:'success'}]"/>
       <mag-table-column prop="sortNo" label="排序"/>
     </mag-table>
 
@@ -62,7 +62,7 @@
       <mag-table-column prop="orgCode" label="机构编码"/>
       <mag-table-column prop="orgName" label="机构名称"/>
       <mag-table-column-tag prop="orgType" label=机构类型 :use-tag="true"
-                            :tag-data="[{value:'10', label:'机构', type:'primary'}, {value:'20',label:'机构所属下级机构', type:'default'}, {value:'30',label:'机构所属部门', type:'success'}]"/>
+                            :tag-data="[{value:'10', label:'机构', type:'primary'}, {value:'20',label:'机构所属下级机构'}, {value:'30',label:'机构所属部门', type:'success'}]"/>
       <mag-table-column prop="sortNo" label="排序"/>
     </mag-table>
 

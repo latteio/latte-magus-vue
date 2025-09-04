@@ -42,14 +42,14 @@ const Objects = {
         }
       }
     } else {
-      console.error("调用 Objects.setObjectValues() 时, 被赋值目标对象不存在.");
+      console.error("Call Objects.setObjectValues(): target object does not exist.");
     }
   },
   /**
    * 解析值
    * @param value
    */
-  parseValue(value: string | number | null) {
+  parsePropertyValue(value: string | number | null) {
     if (null == value) {
       return {
         value: value,
@@ -93,17 +93,7 @@ const Objects = {
       }
     }
 
-    const numericValue = parseFloat(stringValue);
-    if (!isNaN(numericValue)) {
-      return {
-        value: numericValue,
-        unit: 'px',
-        isPercentage: false,
-        isPixel: true
-      }
-    }
-
-    throw new Error(`无效的数据格式: ${value}`);
+    throw new Error(`Call Objects.parsePropertyValue(): invalid data format: ${value}`);
   }
 }
 
