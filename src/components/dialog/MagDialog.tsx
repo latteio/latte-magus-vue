@@ -129,12 +129,12 @@ const MagDialog = defineComponent({
             },
             footer: () => {
               return (props.model.showConfirmBtn || props.model.showCancelBtn)
-                  ? (
+                  && (
                       <div class="mag-dialog__footer">
                         {props.model.showCancelBtn && (<MagButton onClick={onDialogCancel}>取消</MagButton>)}
                         {props.model.showConfirmBtn && (<MagButton onClick={onDialogConfirm} type="primary">确定</MagButton>)}
                       </div>
-                  ) : null
+                  )
             }
           }}>
       </ElDialog>
