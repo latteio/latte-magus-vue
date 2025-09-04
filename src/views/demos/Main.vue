@@ -21,9 +21,8 @@
             <template #title>
               <span>布局</span>
             </template>
-            <el-menu-item @click="handleSelect('form')">表单域</el-menu-item>
-            <el-menu-item @click="handleSelect('dialog')">对话框</el-menu-item>
-            <el-menu-item @click="handleSelect('drawer')">抽屉框</el-menu-item>
+            <el-menu-item @click="handleSelect('borderLayout')">Border布局</el-menu-item>
+            <el-menu-item @click="handleSelect('stackLayout')">Stack布局</el-menu-item>
             <el-menu-item @click="handleSelect('page')">页面</el-menu-item>
           </el-sub-menu>
 
@@ -38,8 +37,9 @@
             <template #title>
               <span>数据</span>
             </template>
-            <el-menu-item @click="handleSelect('borderLayout')">Border布局</el-menu-item>
-            <el-menu-item @click="handleSelect('stackLayout')">Stack布局</el-menu-item>
+            <el-menu-item @click="handleSelect('form')">表单域</el-menu-item>
+            <el-menu-item @click="handleSelect('dialog')">对话框</el-menu-item>
+            <el-menu-item @click="handleSelect('drawer')">抽屉框</el-menu-item>
             <el-menu-item @click="handleSelect('tab')">选项卡</el-menu-item>
             <el-menu-item @click="handleSelect('table')">表格</el-menu-item>
             <el-menu-item @click="handleSelect('editTable')">可编辑表格</el-menu-item>
