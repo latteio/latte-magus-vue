@@ -18,14 +18,14 @@ const MagTab = defineComponent({
     const tabIcon = () => {
       return props.icon
           ? (
-              <div class="mag-tab__header">
+              <div class="mag-view__header">
                 <ElIcon>
                   {h(props.icon)}
                 </ElIcon>
                 <span>{props.header}</span>
               </div>
           )
-          : <div class="mag-tab__header">{props.header}</div>
+          : <div class="mag-view__header">{props.header}</div>
     }
 
     /**

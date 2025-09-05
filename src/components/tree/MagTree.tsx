@@ -122,9 +122,9 @@ const MagTree = defineComponent({
 
       const treeHeader = () => {
         if (props.header) {
-          return <ElHeader class="mag-tree__header" onclick={setExpandedInternal}>
-            <div class="mag-tree__header-text">{props.header}</div>
-            <div class="mag-tree__header-icon">
+          return <ElHeader class="mag-view__header" onclick={setExpandedInternal}>
+            <div class="mag-view__header-text">{props.header}</div>
+            <div class="mag-view__header-icon">
               {
                 componentExpanded.value
                     ? (<ElIcon class="is-expanded"><ArrowRight/></ElIcon>)
@@ -133,7 +133,7 @@ const MagTree = defineComponent({
             </div>
           </ElHeader>
         } else {
-          return <ElHeader class="mag-tree__header-empty">
+          return <ElHeader class="mag-view__header-empty">
           </ElHeader>
         }
       }

@@ -5,40 +5,8 @@ input[aria-hidden="true"] {
   display: none !important;
 }
 
-.mag-form__header {
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.mag-form__header:hover {
-  cursor: pointer;
-}
-
-.el-header.mag-form__header {
-  height: var(--mag-view-header-height);
-  line-height: var(--mag-view-header-height);
-  background-color: var(--mag-view-header-background-color) !important;
-  border-radius: var(--mag-view-card-layout-border-radius);
-}
-
-.el-header > .mag-form__header-text {
-  font-size: var(--mag-view-header-text-size) !important;
-  font-weight: var(--mag-view-header-text-weight) !important;
-  color: var(--mag-view-header-text-color) !important;
-  height: var(--mag-view-header-height);
-  line-height: var(--mag-view-header-height);
-}
-
-.el-header > .mag-form__header-icon {
-}
-
-.el-header.mag-form__header-empty {
-  height: 0 !important;
-}
-
 .el-main.mag-form__main {
-  padding: 8px var(--mag-view-base-padding) 0 var(--mag-view-base-padding) !important;
+  padding: 6px var(--mag-view-base-padding) 0 var(--mag-view-base-padding) !important;
 }
 
 .el-form-item--small {

@@ -126,9 +126,9 @@ const MagForm = defineComponent({
      */
     const formHeader = () => {
       if (props.header) {
-        return <ElHeader class="mag-form__header" onclick={setExpandedInternal}>
-          <div class="mag-form__header-text">{props.header}</div>
-          <div class="mag-form__header-icon">
+        return <ElHeader class="mag-view__header" onclick={setExpandedInternal}>
+          <div class="mag-view__header-text">{props.header}</div>
+          <div class="mag-view__header-icon">
             {
               componentExpanded.value
                   ? (<ElIcon class="is-expanded"><ArrowRight/></ElIcon>)
@@ -137,7 +137,7 @@ const MagForm = defineComponent({
           </div>
         </ElHeader>
       } else {
-        return <ElHeader class="mag-form__header-empty">
+        return <ElHeader class="mag-view__header-empty">
         </ElHeader>
       }
     }

@@ -391,9 +391,9 @@ const MagTable = defineComponent({
      */
     const tableHeader = () => {
       if (props.header) {
-        return <ElHeader class="mag-table__header" onclick={setExpandedInternal}>
-          <div class="mag-table__header-text">{props.header}</div>
-          <div class="mag-table__header-icon">
+        return <ElHeader class="mag-view__header" onclick={setExpandedInternal}>
+          <div class="mag-view__header-text">{props.header}</div>
+          <div class="mag-view__header-icon">
             {
               componentExpanded.value
                   ? (<ElIcon class="is-expanded"><ArrowRight/></ElIcon>)
@@ -402,7 +402,7 @@ const MagTable = defineComponent({
           </div>
         </ElHeader>
       } else {
-        return <ElHeader class="mag-table__header-empty">
+        return <ElHeader class="mag-view__header-empty">
         </ElHeader>
       }
     }

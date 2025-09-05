@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "latte-magus-vue",
-  "version": "2025.2.105",
+  "version": "2025.2.120",
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
   "style": "dist/index.css",

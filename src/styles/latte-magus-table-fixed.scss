@@ -1,38 +1,6 @@
 /**
  * 表格样式
  */
-.mag-table__header {
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.mag-table__header:hover {
-  cursor: pointer;
-}
-
-.el-header.mag-table__header {
-  height: var(--mag-view-header-height);
-  line-height: var(--mag-view-header-height);
-  background-color: var(--mag-view-header-background-color) !important;
-  border-radius: var(--mag-view-card-layout-border-radius);
-}
-
-.el-header > .mag-table__header-text {
-  font-size: var(--mag-view-header-text-size) !important;
-  font-weight: var(--mag-view-header-text-weight) !important;
-  color: var(--mag-view-header-text-color) !important;
-  height: var(--mag-view-header-height);
-  line-height: var(--mag-view-header-height);
-}
-
-.el-header > .mag-table__header-icon {
-}
-
-.el-header.mag-table__header-empty {
-  height: 0 !important;
-}
-
 .el-main.mag-table__main {
   flex: 1;
   padding: 0 !important;
