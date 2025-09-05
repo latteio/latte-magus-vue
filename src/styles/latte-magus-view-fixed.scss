@@ -43,6 +43,27 @@
   height: 0 !important;
 }
 
+.mag-view__view-bars {
+  display: inline-flex !important;
+  align-items: center;
+  width: 100%;
+  height: var(--mag-view-bars-height);
+  padding: 4px var(--mag-view-base-padding) !important;
+  box-sizing: border-box;
+}
+
+.mag-view__view-bars.is-left-alignment {
+  justify-content: flex-start;
+}
+
+.mag-view__view-bars.is-right-alignment {
+  justify-content: flex-end;
+}
+
+.mag-view__view-bars.is-center-alignment {
+  justify-content: center;
+}
+
 .el-main.mag-view__main {
   display: flex;
   padding: 6px !important;

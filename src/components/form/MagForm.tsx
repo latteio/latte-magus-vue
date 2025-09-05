@@ -145,10 +145,18 @@ const MagForm = defineComponent({
     /**
      * 定义底部按钮组
      */
-    const createBottomBarNodes = (formBar: any) => {
+    const createFormBarNodes = (formBar: any) => {
+      const itemsAlign = formBar?.props?.align || "left";
       return <ElRow gutter={props.columnSpace}>
-        <ElCol span={24}>
-          <MagFormBar {...formBar?.props} {...formBar?.attrs} style={'margin-bottom: 8px;'}>
+        <ElCol span={24}
+               class={{
+                 "mag-view__view-bars": true,
+                 "is-left-alignment": itemsAlign === "left",
+                 "is-right-alignment": itemsAlign === "right",
+                 "is-center-alignment": itemsAlign === "center"
+               }}
+               style="margin-bottom: 6px;">
+          <MagFormBar {...formBar?.props} {...formBar?.attrs}>
             {formBar?.children?.default?.()}
           </MagFormBar>
         </ElCol>
@@ -272,7 +280,7 @@ const MagForm = defineComponent({
           return <>
             {formBar
                 && (!formBar.props?.position || formBar.props?.position === "top")
-                && createBottomBarNodes(formBar)}
+                && createFormBarNodes(formBar)}
 
             {rowsJson.map((row: any) => {
               return <ElRow gutter={props.columnSpace}>
@@ -284,7 +292,7 @@ const MagForm = defineComponent({
 
             {formBar
                 && (formBar.props?.position && formBar.props?.position === "bottom")
-                && createBottomBarNodes(formBar)}
+                && createFormBarNodes(formBar)}
           </>
         }
 
@@ -292,7 +300,7 @@ const MagForm = defineComponent({
         return <>
           {formBar
               && (!formBar.props?.position || formBar.props?.position === "top")
-              && createBottomBarNodes(formBar)}
+              && createFormBarNodes(formBar)}
 
           <ElRow gutter={props.columnSpace}>
             {rowsJson[0].cols.map((cols: any) => {
@@ -313,7 +321,7 @@ const MagForm = defineComponent({
 
           {formBar
               && (formBar.props?.position && formBar.props?.position === "bottom")
-              && createBottomBarNodes(formBar)}
+              && createFormBarNodes(formBar)}
         </>
       }
 

@@ -6,26 +6,6 @@
   padding: 0 !important;
 }
 
-.el-main > .mag-table__table-bars {
-  display: flex;
-  height: var(--mag-view-bars-height);
-  align-items: center;
-  padding: 4px var(--mag-view-base-padding) !important;
-  box-sizing: border-box;
-}
-
-.mag-table__table-bars.is-left-alignment {
-  justify-content: flex-start;
-}
-
-.mag-table__table-bars.is-right-alignment {
-  justify-content: flex-end;
-}
-
-.mag-table__table-bars.is-center-alignment {
-  justify-content: center;
-}
-
 .el-main > .mag-table__table {
   border: 0 !important;
 }
@@ -60,11 +40,11 @@
 
 .mag-table__table-page-bars {
   display: flex;
-  height: var(--mag-view-footer-height);
   align-items: center;
-  box-sizing: border-box;
-  background-color: var(--mag-view-footer-background-color) !important;
+  height: var(--mag-view-footer-height);
   padding: 0 20px;
+  background-color: var(--mag-view-footer-background-color) !important;
+  box-sizing: border-box;
 }
 
 .mag-table__table-page-bars.is-left-alignment {

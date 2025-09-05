@@ -411,12 +411,14 @@ const MagTable = defineComponent({
      * Table的工具栏定义
      */
     const tableTopBars = (tableBar: any) => {
-      const alignments = ["left", "center", "right"];
+      const itemsAlign = tableBar?.props?.align || "left";
       return tableBar && (
-          <div class={tableBar.props?.align && alignments.includes(tableBar.props?.align)
-              ? `mag-table__table-bars is-${tableBar.props?.align}-alignment`
-              : "mag-table__table-bars is-left-alignment"}
-          >
+          <div class={{
+            "mag-view__view-bars": true,
+            "is-left-alignment": itemsAlign === "left",
+            "is-right-alignment": itemsAlign === "right",
+            "is-center-alignment": itemsAlign === "center"
+          }}>
             <MagTableBar {...tableBar.props} {...tableBar.attrs}>
               {tableBar.children?.default?.()}
             </MagTableBar>
@@ -428,12 +430,14 @@ const MagTable = defineComponent({
      * Table的分页节点定义
      */
     const tablePaginationBar = () => {
-      const alignments = ["left", "center", "right"];
+      const itemsAlign = props?.pageAlign || "left";
       return props.usePage && (
-          <div class={alignments.includes(props?.pageAlign)
-              ? `mag-table__table-page-bars is-${props?.pageAlign}-alignment`
-              : "mag-table__table-page-bars is-left-alignment"}
-          >
+          <div class={{
+            "mag-table__table-page-bars": true,
+            "is-left-alignment": itemsAlign === "left",
+            "is-right-alignment": itemsAlign === "right",
+            "is-center-alignment": itemsAlign === "center"
+          }}>
             <MagTablePagination layout={props.pageLayout}
                                 size={props.size === "large" ? props.size : "default"}
                                 page-sizes={props.pageSizes}

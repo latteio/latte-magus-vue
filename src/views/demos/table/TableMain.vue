@@ -2,9 +2,10 @@
   <mag-table :visible="true" header="表格样例" ref="empTableRef" :row-checkbox="true" :row-index="true"
              :data="employees" :params="queryParams"
              :use-page="true"
+             page-align="center"
              :border="false"
              :selectable-handler="selectableHandler">
-    <mag-table-bar align="left">
+    <mag-table-bar>
       <mag-button :icon="Plus" @click="addRow">新增</mag-button>
       <mag-input :form-type="false" :model="formData" prop="name" label="姓名: " label-width="60" placeholder="请输入姓名" clearable/>
       <mag-select-date :form-type="false" :model="formData" prop="birth" label="出生日期：" label-width="100" placeholder="请选择出生日期" clearable/>

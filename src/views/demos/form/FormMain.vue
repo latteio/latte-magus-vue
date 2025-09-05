@@ -12,7 +12,7 @@
     </mag-form>
 
     <mag-form region="center" header="操作表单" :model="formData" :columns="3" ref="formRef" :use-query="false">
-      <mag-form-bar position="bottom">
+      <mag-form-bar position="top">
         <mag-button type="primary">保存</mag-button>
         <mag-button type="primary">关闭</mag-button>
       </mag-form-bar>
